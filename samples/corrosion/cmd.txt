@@ -1,0 +1,9 @@
+
+python3 corrosion_2classes.py train --dataset=/home/lym/IronErosionDrone/Mask_RCNN-master/datasets/corrosion3 --weights=coco
+python3 corrosion_2classes.py train --dataset=/home/lym/IronErosionDrone/Mask_RCNN-master/datasets/corrosion3/train --weights=last --kfold=5
+
+python3 corrosion_2classes.py train --dataset=../../datasets/full_data --weights=coco
+
+tensorboard --logdir=/home/lym/IronErosionDrone/Mask_RCNN-master/logs/corrosion20220302T1607
+
+python3 corrosion.py train --dataset=/home/lym/IronErosionDrone/Mask_RCNN-master/datasets/full_data --weights=coco
