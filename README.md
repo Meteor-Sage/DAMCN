@@ -2,7 +2,7 @@
 
 ## Abstract
 
-Metallic corrosion in urban systems is costly and hazardous. Current detection methods are inaccurate. A new method, DAMCN, using dual attention modules, has been developed to detect corrosion regions from digital images collected by unmanned aerial vehicles.
+Metallic corrosion in urban systems is costly and hazardous. A new method, DAMCN, using dual attention modules, has been developed to detect corrosion regions from digital images collected by unmanned aerial vehicles.
 
 ## Structure:
 
