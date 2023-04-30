@@ -124,7 +124,6 @@ def identity_block(input_tensor, kernel_size, filters, stage, block,
                   use_bias=use_bias)(x)
     x = BatchNorm(name=bn_name_base + '2c')(x, training=train_bn)
 
-    x = cbam_block(x)
     print("#"*20)
 
     x = KL.Add()([x, input_tensor])
@@ -168,7 +167,6 @@ def conv_block(input_tensor, kernel_size, filters, stage, block,
                          name=conv_name_base + '1', use_bias=use_bias)(input_tensor)
     shortcut = BatchNorm(name=bn_name_base + '1')(shortcut, training=train_bn)
 
-##    x = cbam_block(x)
     x = KL.Add()([x, shortcut])
     x = KL.Activation('relu', name='res' + str(stage) + block + '_out')(x)
     return x
@@ -1008,6 +1006,7 @@ def build_fpn_mask_graph(rois, feature_maps, image_meta,
                            name="mrcnn_mask_deconv")(x)
     x = KL.TimeDistributed(KL.Conv2D(num_classes, (1, 1), strides=1, activation="sigmoid"),
                            name="mrcnn_mask")(x)
+    x = cbam_block(x)
     return x
 
 

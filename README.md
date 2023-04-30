@@ -8,7 +8,9 @@ Industrial and residential facilities worldwide are exposed to significant costs
 
 CBAM-keras: Sample code for CBAM module.
 
-mrcnn: Architecture of DAMCN model.
+DAMCN-V1: Architecture of DAMCN-V1 model.
+
+DAMCN-V2: Architecture of DAMCN-V2 model.
 
 NEA-Dataset: NEA dataset and its annotations.
 
